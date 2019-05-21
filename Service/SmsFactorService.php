@@ -37,7 +37,7 @@ class SmsFactorService {
         $this->webhookManager = $webhookManager;
     }
     
-    public function getMessage(){
+    public function message(){
         return $this->messageManager;
     }
     
