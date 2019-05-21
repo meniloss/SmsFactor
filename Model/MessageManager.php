@@ -9,6 +9,7 @@ class MessageManager {
     public function __construct(RequestManager $requestManager) {
         $this->requestManager = $requestManager;
     }
+    
     /**
      * Send, or simulate, a message.
      *
@@ -17,7 +18,7 @@ class MessageManager {
      *
      * @return ApiResponse The api response.
      */
-    public static function send($params = null, $simulate = false)
+    public function send($params = null, $simulate = false)
     {
         $url = $simulate ? "/send/simulate" : "/send";
         $response = $this->requestManager->request('get', $url, null, $params);
