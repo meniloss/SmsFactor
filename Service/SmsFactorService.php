@@ -15,7 +15,7 @@ use Meniloss\SmsFactorBundle\Model\WebhookManager;
  *
  * @author olivi
  */
-class MessagesService {
+class SmsFactorService {
     private $messageManager;
     
     private $accountManager;
@@ -42,22 +42,23 @@ class MessagesService {
     }
     
     public function getAccount(){
-        return $this->accountManager;
+        return self::accountManager;
     }
     
     public function getCampaign(){
-        return $this->campaignManager;
+        return self::campaignManager;
     }
     
     public function getList(){
-        return $this->listManager;
+        return self::listManager;
     }
     
     public function getToken(){
-        return $this->tokenManager;
+        return self::tokenManager;
     }
     
     public function getWebhook(){
-        return $this->webhookManager;
+        return self::webhookManager;
     }
 }
+
