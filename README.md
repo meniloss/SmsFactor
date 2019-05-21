@@ -20,7 +20,7 @@ $bundles = [
 
 ## config.yml:
 
-You must add your api key find in your account on primotexto.com
+You must add your api key find in your account on smsfactor.com
 
 ```yml
 meniloss_sms_factor:
