@@ -1,6 +1,6 @@
 <?php
 
-namespace Meniloss\PrimoTextoBundle\DependencyInjection;
+namespace Meniloss\SmsFactorBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
