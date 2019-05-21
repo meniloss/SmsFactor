@@ -29,3 +29,12 @@ meniloss_sms_factor:
     
 ## Usage:
 
+Send a message :
+```php
+$smsFactor = $this->get('meniloss.sms_factor');
+$response = $smsFactor->message()->send([
+        'to' => '33601000000',
+	'text' => 'Did you ever dance whith the devil in the pale moonlight ?'
+]);
+print_r($response->getJson());
+```
