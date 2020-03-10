@@ -1,5 +1,4 @@
 <?php
-
 namespace Meniloss\PrimoTextoBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
