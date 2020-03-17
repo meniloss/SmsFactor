@@ -1,5 +1,4 @@
 <?php
-
 namespace Meniloss\PrimoTextoBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
@@ -17,19 +16,13 @@ class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('meniloss_sms_factor');
+        $treeBuilder = new TreeBuilder('meniloss_sms_factor');
         
-        $rootNode
+        $treeBuilder->getRootNode()
             ->children()
-                ->scalarNode('api_key')
-                ->end() // twitter
+                ->scalarNode('api_key')->end()
             ->end()
         ;
-
-        // Here you should define the parameters that are allowed to
-        // configure your bundle. See the documentation linked above for
-        // more information on that topic.
 
         return $treeBuilder;
     }
