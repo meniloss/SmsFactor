@@ -1,6 +1,9 @@
-services:            
+services:      
+    
+    Meniloss\SmsFactorBundle\Service\SmsFactorService: '@meniloss.sms_factor'
+    
     meniloss.sms_factor:
-        class: Meniloss\PrimoTextoBundle\Service\SmsFactorService
+        class: Meniloss\SmsFactorBundle\Service\SmsFactorService
         arguments:
             - '@meniloss_sms_factor.message_manager'
             - '@meniloss_sms_factor.account_manager'
@@ -10,40 +13,36 @@ services:
             - '@meniloss_sms_factor.webhook_manager'
             
     meniloss_sms_factor.message_manager:
-        class: Meniloss\PrimoTextoBundle\Model\MessageManager
+        class: Meniloss\SmsFactorBundle\Model\MessageManager
         arguments:
             - '@meniloss_sms_factor.request_manager'
         
     meniloss_sms_factor.account_manager:
-        class: Meniloss\PrimoTextoBundle\Model\AccountManager
+        class: Meniloss\SmsFactorBundle\Model\AccountManager
         arguments:
             - '@meniloss_sms_factor.request_manager'
     
     meniloss_sms_factor.campaign_manager:
-        class: Meniloss\PrimoTextoBundle\Model\CampaignManager
+        class: Meniloss\SmsFactorBundle\Model\CampaignManager
         arguments:
             - '@meniloss_sms_factor.request_manager'
         
     meniloss_sms_factor.list_manager:
-        class: Meniloss\PrimoTextoBundle\Model\ListManager
+        class: Meniloss\SmsFactorBundle\Model\ListManager
         arguments:
             - '@meniloss_sms_factor.request_manager'
         
     meniloss_sms_factor.token_manager:
-        class: Meniloss\PrimoTextoBundle\Model\TokenManager
+        class: Meniloss\SmsFactorBundle\Model\TokenManager
         arguments:
             - '@meniloss_sms_factor.request_manager'
         
     meniloss_sms_factor.webhook_manager:
-        class: Meniloss\PrimoTextoBundle\Model\WebhooManager
+        class: Meniloss\SmsFactorBundle\Model\WebhookManager
         arguments:
             - '@meniloss_sms_factor.request_manager'
     
     meniloss_sms_factor.request_manager:
-        class: Meniloss\PrimoTextoBundle\Model\RequestManager
+        class: Meniloss\SmsFactorBundle\Model\RequestManager
         arguments:
             - 
-            
-#    meniloss_primo_texto.example:
-#        class: Meniloss\PrimoTextoBundle\Example
-#        arguments: ["@service_id", "plain_value", "%parameter%"]
