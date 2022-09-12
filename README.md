@@ -2,11 +2,8 @@
 
 ## Install using composer:
 
-```yml
-"require": {
-        ...,
-        "meniloss/sms-factor": "1.*"
-    },
+```cmd
+composer require meniloss/sms-factor
 ```
     
 ## add to your AppKernel:
